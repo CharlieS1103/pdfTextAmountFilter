@@ -53,7 +53,7 @@ for filename in os.listdir("unprocessed"):
                 filenum = filename.split("-")[1]
                 shutil.move("unprocessed/page-" + str(filenum), "processed/page-" + str(filenum) )
         if lessOrMore.upper() == "Y":
-            if percentage > float(percentageCap):
+            if percentage < float(percentageCap):
                 filenum = filename.split("-")[1].split(".")[0]
                 filenum = int(filenum) + i
                 shutil.move("unprocessed/page-" + str(filenum), "processed/page-" + str(filenum))
